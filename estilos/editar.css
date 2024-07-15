@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+:root{
+    --color--background:#000819;
+    --color--letrasBrancas: white;
+    --color--caixaPesqu:#071229;
+    --color--link:#280ECC;
+}
+hr{
+    width: 85%;
+    margin: auto;
+}
+body{
+    
+    color: var(--color--letrasBrancas);
+    background-color: var(--color--background);
+}
+.card-body{
+    background-color: var(--color--caixaPesqu);
+    color: var(--color--letrasBrancas);
+    border: 2px solid var(--color--link);
+    border-radius: 5px;
+}
+
+#upd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}

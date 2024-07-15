@@ -1,0 +1,3 @@
+Estou criando um site para uma empresa onde eles podem guardar os vídeos da formação. 
+Quero deixar pronto na primeira parte do projeto: login, página inicial (index), principal local onde os 
+vídeos poderão ser vistos, além dos CRUDs para adicionar mais usuários.

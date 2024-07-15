@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #000819;
+    --color-letrasBrancas: white;
+    --color-table-background: #343a40; /* Dark color for the table */
+    --color-link: #007bff; /* Bootstrap primary blue */
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-letrasBrancas);
+}
+
+hr {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.table {
+    color: var(--color-letrasBrancas);
+}
+
+.table-responsive {
+    background-color: var(--color-table-background);
+    border: 1px solid var(--color-link);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.table-dark th,
+.table-dark td {
+    border-color: var(--color-link);
+}
+
+.table-dark th {
+    background-color: var(--color-link);
+}
+
+.table-dark th,
+.table-dark td {
+    text-align: center;
+}
+
+.table-dark thead th {
+    color: var(--color-letrasBrancas);
+    border-color: var(--color-link);
+}
+
+.table-dark tbody+tbody {
+    border-top-color: var(--color-link);
+}
+
+.btn-editar {
+    color: var(--color-letrasBrancas);
+    background-color: var(--color-link);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-editar:hover {
+    background-color: darken(var(--color-link), 10%);
+}
+
+.btn-outline-danger, .btn-secondary {
+    border-radius: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: var(--color-table-background);
+    color: var(--color-letrasBrancas);
+}
+
+.card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--color-link);
+}
+
+.card-header h2 {
+    color: var(--color-letrasBrancas);
+}

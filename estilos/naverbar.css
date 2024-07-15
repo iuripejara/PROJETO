@@ -1,0 +1,53 @@
+
+:root{
+    --color--background:#000819;
+    --color--letrasBrancas: white;
+    --color--icon:white;
+    --color--sidebar:#1B1259;
+    --color--link:#280ECC;
+    --color--caixaPesqu:#071229;
+    --color--letrasPesqu:#393742;
+    --color--txt-link-Lougout: #ce1111;
+}
+
+
+#offcanvasExample{
+    background-color: var(--color--caixaPesqu);
+}
+
+.menu > h5 {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+
+ul li.item-menu{
+    transition: .2s;
+}
+ul li.item-menu a .txt-link:hover{
+    color: #FFD700;
+}
+
+ul{
+    list-style: none;  
+}
+
+.Menu-lateral ul > li {
+    font-size: 1.5rem;
+}
+ul li.item-menu a{
+    color: var(--color--letrasBrancas);
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    line-height: 3rem;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 2rem;
+    color: var(--color--letrasBrancas)
+}
+ul li.item-menu a .txt-link-Lougout{
+    color: var(--color--txt-link-Lougout) ;
+    margin-left: 2rem;
+}

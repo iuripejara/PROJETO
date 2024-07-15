@@ -1,0 +1,77 @@
+:root {
+    --color-background: #1a1a2e;
+    --color-letrasBrancas: #e0e0e0;
+    --color-caixaPesqu: #162447;
+    --color-highlight: #0f3460;
+    --color-button: #e94560;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-letrasBrancas);
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+}
+
+.topo h1 {
+    color: var(--color-letrasBrancas);
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-button);
+    color: var(--color-letrasBrancas);
+}
+#tema_id {
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 100 !important; 
+    font-style: oblique;
+}
+
+.list-group-item {
+    background-color: var(--color-caixaPesqu);
+    color: var(--color-letrasBrancas);
+    border: none;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.list-group-item:hover {
+    background-color: var(--color-highlight);
+}
+
+.collapse .card-body {
+    background-color: var(--color-background);
+    color: var(--color-letrasBrancas);
+    border-top: 1px solid var(--color-highlight);
+}
+
+.texto_small{
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.video-container {
+    border: 2px solid var(--color-highlight);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.video-container video {
+    border-radius: 5px;
+}
+
+.collapse .card-body img {
+    background-color: var(--color-background);
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}

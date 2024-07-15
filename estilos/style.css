@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxygen",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',"Open Sans", sans-serif;  
+}
+:root{
+    --color--background:#000819;
+    --color--letrasBrancas: white;
+    --color--icon:white;
+    --color--sidebar:#1B1259;
+    --color--link:#280ECC;
+    --color--caixaPesqu:#071229;
+    --color--letrasPesqu:#393742;
+    --color--txt-link-Lougout: #f80000;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--color--background);
+    color: var(--color--letrasBrancas);
+   
+}
+hr{
+    width: 80% ;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+
+.topo{
+    color: linear-gradient(rgb(223, 28, 28), rgb(90, 16, 158), );
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    
+}
+
+#pesquisa-topico{
+    background-color: var(--color--caixaPesqu);
+    color: var(--color--letrasBrancas);
+    border: none;
+    font-family: "Roboto", sans-serif;
+}
+#search{
+    background-color: var(--color--caixaPesqu);
+    font-family: "Roboto", sans-serif;
+    border: none;
+}
+::placeholder{
+    color: var(--color--letrasBrancas)!important;
+}
+.card-title{
+    color: var(--color--letrasBrancas)
+}
+
+.card-hr{
+    
+    width: 100%;
+    color: var(--color--sidebar);
+}
+.card{
+    background-color: var(--color--caixaPesqu);
+    border-radius: 1.5rem; 
+}
+.card-img-top {
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+.play-video a  {
+    color: var(--color--link);
+    text-decoration: none;
+}
+#search{
+    color: white !important;
+}
+.icon-button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.footer{
+    
+    text-align: center;
+    margin: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
