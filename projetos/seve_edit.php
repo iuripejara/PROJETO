@@ -23,20 +23,19 @@ if (isset($_POST['upd'])) {
 
             // Move o arquivo para o diretório de destino
             if (move_uploaded_file($_FILES[$fileInput]['tmp_name'], $targetFilePath)) {
-                return "../" . str_replace("D:/xapp/htdocs/trabalho/", "", $targetFilePath);
+                return "" . str_replace("htdocs/trabalho/", "", $targetFilePath);
             } else {
                 echo "Erro ao mover o arquivo para o servidor.";
                 return $currentFile; // Mantém o arquivo atual se houver erro no upload
             }
         } else {
-            return $currentFile; // Mantém o arquivo atual se nenhum novo arquivo for enviado
+            return $currentFile; // Mantém o arquivo atual se nenhum novo arquivo for enviado a
         }
     }
 
     // Caminhos de upload específicos
-    $videoUploadDir = 'D:/xapp/htdocs/trabalho/videos/';
-    $logoUploadDir = 'D:/xapp/htdocs/trabalho/imags/logo/';
-    $uploadDir = 'D:/xapp/htdocs/trabalho/imags/';
+    $videoUploadDir = '../trabalho/videos/';//teste 
+    $uploadDir = '../trabalho/imags/';
 
     // Obtenção dos arquivos atuais do banco de dados
     $sql = "SELECT * FROM videos WHERE id = $id";
