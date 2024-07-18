@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 
         // Move o arquivo para o diretório de destino
         if (move_uploaded_file($_FILES[$fileInput]['tmp_name'], $targetFilePath)) {
-            return "../" . str_replace("D:/xapp/htdocs/trabalho/", "", $targetFilePath);
+            return "" . str_replace("htdocs/PROJETO/", "", $targetFilePath);
         } else {
             echo "Erro ao mover o arquivo para o servidor.";
             return "";
@@ -26,9 +26,9 @@ if (isset($_POST['submit'])) {
     }
 
     // Caminhos de upload específicos
-    $videoUploadDir = 'D:/xapp/htdocs/trabalho/videos/';
-    $logoUploadDir = 'D:/xapp/htdocs/trabalho/imags/logo/';
-    $uploadDir = 'D:/xapp/htdocs/trabalho/imags/';
+    $videoUploadDir = '../videos/';
+    $logoUploadDir = '../imags/logo/';
+    $uploadDir = '../imags/';
 
     // Upload e obtenção de caminhos relativos para cada campo de arquivo
     $video = uploadFile('video', $videoUploadDir);
