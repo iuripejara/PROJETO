@@ -56,11 +56,8 @@ $resultado = $ligacao->query($sql);
                         <table class="table table-dark table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">Vídeo</th>
-                                    <th scope="col">Imagem</th>
                                     <th scope="col">Tema</th>
                                     <th scope="col">Título</th>
-                                    <th scope="col">Imagem1</th>
                                     <th scope="col">Descrição</th>
                                     <th scope="col">Descrição2</th>
                                     <th scope="col">Descrição3</th>
@@ -72,11 +69,10 @@ $resultado = $ligacao->query($sql);
                                 <?php
                                 while ($registro = $resultado->fetch_assoc()) {
                                     echo "<tr>";
-                                    echo "<td>" . htmlspecialchars($registro['video']) . "</td>";
-                                    echo "<td>" . htmlspecialchars($registro['imag']) . "</td>";
+                                   
                                     echo "<td>" . htmlspecialchars($registro['tema']) . "</td>";
                                     echo "<td>" . htmlspecialchars($registro['title']) . "</td>";
-                                    echo "<td>" . htmlspecialchars($registro['imag1']) . "</td>";
+                                   
                                     echo "<td>" . htmlspecialchars($registro['descr']) . "</td>";
                                     echo "<td>" . htmlspecialchars($registro['descr2']) . "</td>";
                                     echo "<td>" . htmlspecialchars($registro['descr3']) . "</td>";

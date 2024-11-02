@@ -27,12 +27,14 @@ hr {
     color: var(--color-letrasBrancas);
 }
 
+
 .table-responsive {
     background-color: var(--color-table-background);
     border: 1px solid var(--color-link);
     border-radius: 15px;
     padding: 15px;
     margin-top: 20px;
+    
 }
 
 .table-dark th,
@@ -52,6 +54,7 @@ hr {
 .table-dark thead th {
     color: var(--color-letrasBrancas);
     border-color: var(--color-link);
+    
 }
 
 .table-dark tbody+tbody {
@@ -87,4 +90,16 @@ hr {
 
 .card-header h2 {
     color: var(--color-letrasBrancas);
+}
+
+.password_input{
+    background-color: var(--color-table-background);
+    color: var(--color-letrasBrancas);
+   
+    
+    font-size: 20px;
+}
+
+button{
+    background-color: var(--color-table-background);
 }

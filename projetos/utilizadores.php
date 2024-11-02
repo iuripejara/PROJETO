@@ -41,7 +41,8 @@ $resultado = $ligacao->query($sql);
                 </div>
                 <div class="card-body">
                 <div class="row mb-3">
-                    <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                    <div class="col-12
+                        d-flex justify-content-center justify-content-md-end">
                         <a href="criar_utli.php" class="btn btn-secondary">
                             <i class="bi bi-plus-square-dotted pe-2"></i>Criar utilizadores
                         </a>
@@ -50,7 +51,7 @@ $resultado = $ligacao->query($sql);
                     <div class="table-responsive">
                         <table class="table table-dark table-bordered">
                             <thead>
-                                <tr>
+                                <tr >
                                     <th scope="col">nome</th>
                                     <th scope="col">senha</th>
                                     <th scope="col">Ação</th>
@@ -60,8 +61,11 @@ $resultado = $ligacao->query($sql);
                                 <?php
                                 while ($registro = $resultado->fetch_assoc()) {
                                     echo "<tr>";
-                                    echo "<td>" . htmlspecialchars($registro['nome']) . "</td>";
-                                    echo "<td>" . htmlspecialchars($registro['senha']) . "</td>";
+                                    echo "<td class='p-3  '>" . htmlspecialchars($registro['nome']) . "</td>";
+                                    echo "<td class='d-flex justify-content-center'> 
+                                        <input type='password' value='" . htmlspecialchars($registro['senha']) . "' class='password_input mt-3 p-1 w-50 border-0 rounded-1 me-2' id='senha-{$registro['id']}' readonly>
+                                        <button type='button' onclick='togglePassword(\"senha-{$registro['id']}\")' class='border-0 rounded-1 mt-3 p-1 '>👁️</button>
+                                    </td>";
                                     echo "<td>
                                         <a href='editar_utilizadores.php?id=" . htmlspecialchars($registro['id']) . "' class='btn btn-sm btn-primary mt-3'>
                                             <i class='bi bi-pencil-fill'></i>
@@ -82,5 +86,6 @@ $resultado = $ligacao->query($sql);
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../scripts/verSenha.js"></script>
 </body>
 </html>
