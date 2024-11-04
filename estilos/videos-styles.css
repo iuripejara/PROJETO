@@ -75,3 +75,29 @@ body {
     margin: 0 auto;
     border-radius: 5px;
 }
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline;
+    opacity: 1;
+    transform: scale(1);
+    animation: starAnimation 0.5s ease;
+}
+
+@keyframes starAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

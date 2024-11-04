@@ -52,6 +52,9 @@ $registro = $resultado->fetch_assoc();
                         </video>
                     </div>
                 </div>
+                <div class="completedBT p-4">
+                    <button id="completeButton" class="p-2 border rounded-2 btn btn-primary">Clique aqui</button>
+                </div>
                 <!-- Lista de vídeos -->
                 <div class="col-sm-12 col-lg-5 mt-lg-0 mt-sm-5 mt-2">
                     <div class="list-group" id="videoAccordion">
@@ -100,6 +103,7 @@ $registro = $resultado->fetch_assoc();
             </div>
         </div>
     </main>
+    <script src="../scripts/concluido.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
