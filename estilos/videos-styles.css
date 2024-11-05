@@ -19,85 +19,75 @@ body {
     font-weight: 300;
 }
 
+.container {
+    margin-top: 20px;
+}
+
 .topo h1 {
     color: var(--color-letrasBrancas);
     font-weight: 600;
 }
 
-.btn-outline-primary:hover {
-    background-color: var(--color-button);
-    color: var(--color-letrasBrancas);
-}
-#tema_id {
-    font-family: "Montserrat", sans-serif; 
-    font-weight: 100 !important; 
-    font-style: oblique;
+.video-container {
+    border: 2px solid var(--color-highlight);
+    overflow: hidden;
+    width: 100%;
 }
 
+.sidebar {
+    color: var(--color-background);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Estilo para cada item do grupo de lista */
 .list-group-item {
-    background-color: var(--color-caixaPesqu);
+    background-color: var(--color-background) !important;
     color: var(--color-letrasBrancas);
     border: none;
-    margin-bottom: 0.5rem;
-    border-radius: 5px;
+}
+
+.list-group-item:focus, .list-group-item:active {
+    background-color: var(--color-caixaPesqu) !important;
+    color: var(--color-letrasBrancas) !important;
 }
 
 .list-group-item:hover {
-    background-color: var(--color-highlight);
+    background-color: var(--color-caixaPesqu);
+    color: var(--color-letrasBrancas);
 }
 
-.collapse .card-body {
+.card {
     background-color: var(--color-background);
     color: var(--color-letrasBrancas);
-    border-top: 1px solid var(--color-highlight);
+    font-size: 18px; /* Ajuste o tamanho conforme desejar */
 }
 
-.texto_small{
-    font-family: "Playfair Display", serif;
-    font-size: 16px;
+.card h5 {
+    font-size: 20px; /* Aumenta o tamanho dos títulos dentro da card */
 }
 
-.video-container {
-    border: 2px solid var(--color-highlight);
-    border-radius: 5px;
-    overflow: hidden;
+.card p {
+    font-size: 18px; /* Aumenta o tamanho do texto do corpo */
+}
+/* Títulos da barra lateral */
+.sidebar h5 {
+    margin-bottom: 10px;
 }
 
-.video-container video {
-    border-radius: 5px;
-}
-
-.collapse .card-body img {
-    background-color: var(--color-background);
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px;
-}
-
-.hidden {
-    display: none;
-}
-
-.show {
-    display: inline;
-    opacity: 1;
-    transform: scale(1);
-    animation: starAnimation 0.5s ease;
-}
-
-@keyframes starAnimation {
-    0% {
-        transform: scale(1);
-        opacity: 1;
+/* Responsividade */
+@media (min-width: 992px) {
+    .video-section {
+        display: flex;
+        justify-content: space-between;
     }
-    50% {
-        transform: scale(1.2);
-        opacity: 0.8;
+
+    .video-container {
+        width: 65%;
     }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+
+    .sidebar {
+        width: 30%;
+        margin-left: 20px;
     }
 }

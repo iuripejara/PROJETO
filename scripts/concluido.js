@@ -1,28 +1,31 @@
-    // Recupera o estado do localStorage
-    let isCompleted = localStorage.getItem("isCompleted") === "true";
+// Obtém o ID do vídeo atual a partir da URL (ex: videos.php?id=1)
+const urlParams = new URLSearchParams(window.location.search);
+const videoId = urlParams.get('id');
 
-    const button = document.getElementById("completeButton");
-    const message = document.getElementById("message");
+// Recupera o estado do localStorage para este vídeo específico
+let isCompleted = localStorage.getItem(`isCompleted_${videoId}`) === "true";
 
-    // Se já estiver completado, atualiza a interface
-    if (isCompleted) {
+const button = document.getElementById("completeButton");
+const message = document.getElementById("message");
+
+// Atualiza a interface se o vídeo já estiver marcado como concluído
+if (isCompleted) {
+    button.textContent = "Concluído! ★";
+    button.style.backgroundColor = "green";
+    message.classList.remove("hidden");
+    message.classList.add("show");
+}
+
+button.addEventListener("click", function() {
+    // Verifica se o estado já está "Concluído"
+    if (!isCompleted) {
         button.textContent = "Concluído! ★";
-        button.style.backgroundColor = "green"; // Altera a cor para verde
+        button.style.backgroundColor = "green";
+        isCompleted = true;
+        localStorage.setItem(`isCompleted_${videoId}`, "true");
+
+        // Exibe a mensagem de conclusão
         message.classList.remove("hidden");
         message.classList.add("show");
     }
-
-    button.addEventListener("click", function() {
-        // Verifica se o estado já está "Concluído"
-        if (!isCompleted) {
-            // Muda o texto do botão para "Concluído!"
-            button.textContent = "Concluído! ★";
-            button.style.backgroundColor = "green"; // Altera a cor de fundo para verde
-            isCompleted = true; // Atualiza o estado para "Concluído"
-            localStorage.setItem("isCompleted", "true"); // Salva o estado no localStorage
-
-            // Exibe a mensagem de conclusão
-            message.classList.remove("hidden");
-            message.classList.add("show");
-        }
-    });
+});
