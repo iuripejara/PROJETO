@@ -1,4 +1,4 @@
-<?php
+<?php 
 include('protect.php');
 
 // Verifique se a sessão de login está ativa
@@ -56,13 +56,12 @@ if (isset($_SESSION["id"])) {
         <div class="card">
             <div class="card-body">
                 <?php
-                    // Acesse os dados do usuário usando o array associativo
                     echo "<h4 class='card-title'>Bem-vindo, " . htmlspecialchars($user['nome']) . "</h4>";
-                    echo "<p class='card-text'>ID do Utilizador: " . htmlspecialchars($user['id']) . "</p>"; // Exemplo de como mostrar o ID
+                    echo "<p class='card-text'>Total de videos concluidos : " . htmlspecialchars($user['id']) . "</p>"; // Exemplo de como mostrar o ID
                     
                     // Exibindo a foto de perfil
                     echo "<div>";
-                    echo "<img src='" . htmlspecialchars($user['foto_perfil']) . "' class='img-thumbnail' width='150'>";
+                    echo "<img src='" . htmlspecialchars($user['foto_perfil']) . "' class='perfil-img img-thumbnail' width='150'>";
                     echo "</div>";
                 ?> 
                 <div class="mb-3 mt-3 d-flex flex-column ">
@@ -75,10 +74,9 @@ if (isset($_SESSION["id"])) {
                         <button type="button" class="btn btn-success" onclick="document.getElementById('foto_perfil').click();">Escolher Foto</button>
 
                         <!-- Botão de submit -->
-                        <button type="submit" class="btn btn-primary">Salvar Foto</button>
+                        <button type="submit" class="btn btn-primary mt-2">Salvar Foto</button>
                     </form>
-                </div
-
+                </div>
                     
             </div>
         </div>

@@ -8,6 +8,16 @@ INSERT INTO utilizadores (nome, senha) VALUES ('adm', '4554');
 INSERT INTO utilizadores (nome, senha) VALUES ('teste', '9090');
 INSERT INTO utilizadores (nome, senha) VALUES ('iuri', '12345');
 
+CREATE TABLE videos_concluidos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    video_id INT,
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES utilizadores(id),
+    CONSTRAINT fk_video FOREIGN KEY (video_id) REFERENCES videos(id),
+    CONSTRAINT unique_user_video UNIQUE (user_id, video_id)
+);
+
+
 <!-- tabelas videos  -->
 CREATE TABLE videos (
     id INT PRIMARY KEY AUTO_INCREMENT,

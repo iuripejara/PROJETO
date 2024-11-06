@@ -1,21 +1,95 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Oxygen",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',"Open Sans", sans-serif;  
-}
-:root{
-    --color--background:#000819;
-    --color--letrasBrancas: white;
-    --color--caixaPesqu:#071229;
+    font-family: "Oxygen", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', "Open Sans", sans-serif;
 }
 
-body{
+:root {
+    --color--background: #000819;
+    --color--letrasBrancas: white;
+    --color--caixaPesqu: #071229;
+    --color--btnSuccess: #28a745;
+    --color--btnPrimary: #007bff;
+}
+
+body {
     height: 100vh;
     background-color: var(--color--background) !important;
     color: var(--color--letrasBrancas) !important;
 }
-.card{
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.card {
     background-color: var(--color--caixaPesqu) !important;
     color: var(--color--letrasBrancas) !important;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.perfil-img {
+    border-radius: 100px !important; /* Tornando a imagem perfeitamente redonda */
+    border: 3px solid var(--color--btnPrimary) !important;
+    width: 200px; /* Aumentando o tamanho da imagem */
+    height: 200px; /* Aumentando o tamanho da imagem */
+    transition: box-shadow 0.3s ease;
+}
+
+.perfil-img:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+.btn {
+    margin: 0.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-success {
+    background-color: var(--color--btnSuccess) !important;
+    border-color: var(--color--btnSuccess) !important;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-primary {
+    background-color: var(--color--btnPrimary) !important;
+    border-color: var(--color--btnPrimary) !important;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+hr.bg-light {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
