@@ -2,6 +2,8 @@
 include('protect.php');
 $sql = "SELECT * FROM videos";
 $resultado = $ligacao->query($sql);
+
+
 ?>
 
 <!DOCTYPE html>

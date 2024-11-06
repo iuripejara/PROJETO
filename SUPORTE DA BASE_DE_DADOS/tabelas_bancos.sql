@@ -14,7 +14,7 @@ CREATE TABLE videos (
     video VARCHAR(100) NOT NULL,
     imag VARCHAR(100) NOT NULL,
     tema VARCHAR(50) NOT NULL,
-    title VARCHAR(50) NOT NULL
+    title VARCHAR(50) NOT NULL,
     imag1 VARCHAR(100) NOT NULL,
     imag2 VARCHAR(100) NOT NULL,
     imag3 VARCHAR(100) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE videos (
     minut3 VARCHAR(20) NOT NULL,
     descr VARCHAR(100) NOT NULL,
     descr2 VARCHAR(100) NOT NULL,
-    descr3 VARCHAR(100) NOT NULL,
+    descr3 VARCHAR(100) NOT NULL
 );
 INSERT INTO videos (video, imag, tema, title, imag1, imag2, imag3, minut, minut2, minut3, descr, descr2, descr3)
 VALUES 
@@ -33,3 +33,4 @@ VALUES
 ('../videos/nextjs.mkv', '../imags/logo/nextjs.png', 'Next js', 'Next js', '../imags/nextjs_1.png', '../imags/nextjs_2.png', '../imags/nextjs_3.png', '5mins', '38mins', '10mins', 'Next js Imagem de exemplo : 1', 'Next js Imagem de exemplo : 2', 'Next js Imagem de exemplo : 3'),
 ('../videos/react.mkv', '../imags/logo/react.png', 'React js', 'React js', '../imags/react_1.png', '../imags/react_2.png', '../imags/react_3.png', '20mins', '30mins', '40mins', 'react js Imagem de exemplo : 1', 'react js Imagem de exemplo : 2', 'react js Imagem de exemplo : 3'),
 ('../videos/nodejs.mkv', '../imags/logo/nodejs.png', 'Node js', 'Node js', '../imags/nodejs_1.png', '../imags/nodejs_2.png', '../imags/nodejs_3.png', '25mins', '44mins', '56mins', 'node js Imagem de exemplo : 1', 'node js Imagem de exemplo : 2', 'node js Imagem de exemplo : 3');
+ALTER TABLE utilizadores ADD COLUMN foto_perfil VARCHAR(255) DEFAULT 'imagens/default.png';
