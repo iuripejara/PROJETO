@@ -1,33 +1,143 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
-:root{
-    --color--background:#000819;
-    --color--letrasBrancas: white;
-    --color--caixaPesqu:#071229;
-    --color--link:#280ECC;
-}
-hr{
-    width: 85%;
-    margin: auto;
-}
-body{
-    
-    color: var(--color--letrasBrancas);
-    background-color: var(--color--background);
-}
-.card-body{
-    background-color: var(--color--caixaPesqu);
-    color: var(--color--letrasBrancas);
-    border: 2px solid var(--color--link);
-    border-radius: 5px;
+/* Definindo cores mais intensas mantendo a harmonia */
+:root {
+    --color-background: #121c2d; /* Azul bem escuro para o fundo da página */
+    --color-caixaPesqu: #1a2837; /* Azul intermediário para caixas de pesquisa */
+    --color-primary: #4e73df; /* Azul claro para cabeçalhos e botões */
+    --color-accent: #17a589; /* Verde suave para destaque */
+    --color-dark: #18243b; /* Cor escura adicional para áreas secundárias */
+    --color-light: #f8f9fa; /* Branco suave para o texto */
+    --color-hover: rgba(78, 115, 223, 0.2); /* Hover mais forte */
+    --color-btn-hover: #375a9c; /* Azul mais escuro para hover de botões */
+    --shadow-light: rgba(0, 0, 0, 0.15); /* Sombra mais visível para as células */
+    --shadow-hover: rgba(78, 115, 223, 0.3); /* Sombra mais forte para hover */
 }
 
-#upd{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+body {
+    height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-light);
+    font-family: 'Arial', sans-serif;
+}
+
+hr {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-light);
+}
+
+/* Tabela */
+.teste {
+    background-color: var(--color-background) !important;
+}
+
+.table {
+    color: var(--color-light) !important;
+    background-color: var(--color-background) !important;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px var(--shadow-light); /* Sombra mais forte na tabela */
+}
+
+.table th, .table td {
+    background-color: var(--color-background) !important;
+    color: var(--color-light) !important;
+    padding: 15px !important;
+    border: 1px solid var(--color-primary) !important;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.table th {
+    font-weight: bold;
+    font-size: 1.2rem; /* Aumentando o tamanho da fonte */
+    background-color: var(--color-primary); /* Cabeçalho azul claro */
+}
+
+.table tbody tr:hover {
+    background-color: var(--color-hover) !important;
+    box-shadow: 0 2px 8px var(--shadow-hover); /* Sombra mais intensa no hover */
+    cursor: pointer;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+/* Tabela responsiva */
+.table-responsive {
+    background-color: var(--color-caixaPesqu);
+    border: 1px solid var(--color-primary);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+/* Estilo dos botões */
+.btn-sm {
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 8rem; /* Botão mais largo */
+    margin: .25rem;
+    font-size: 1rem; /* Aumento da fonte */
+    padding: 10px 15px; /* Aumento no padding */
+    background-color: var(--color-primary); /* Botões com a cor principal */
+}
+
+.btn-sm:hover {
+    background-color: var(--color-btn-hover); /* Hover mais forte nos botões */
+}
+
+.card {
+    border-radius: 15px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    box-shadow: 0 4px 12px var(--shadow-light); /* Sombra mais forte nas cartas */
+}
+
+.card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 8px var(--shadow-light); /* Sombra mais forte na header */
+}
+
+.card-header h2 {
+    color: var(--color-light);
+}
+
+/* Responsividade para celular */
+@media (max-width: 767px) {
+    .table-responsive {
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    .table-dark th,
+    .table-dark td {
+        font-size: 0.9rem; /* Ajuste no tamanho da fonte */
+        word-wrap: break-word;
+    }
+
+    .table-responsive table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .btn-sm {
+        font-size: 1rem;
+    }
+
+    .card-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .row.mb-3.text-end {
+        margin-bottom: 1rem;
+    }
+
+    .table th, .table td {
+        padding: 12px; /* Maior padding nas células */
+    }
 }

@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
         <div class="row justify-content-center">
             <div class="col-md-8 mb-5">
                 <div class="card">
-                    <div class="card-body ">
+                    <div class="card-body">
                         <h5 class="card-title text-center">Criar Novo Registro</h5>
                         <form action="criar.php" method="post" enctype="multipart/form-data">
                             <div class="row mb-3">
@@ -148,8 +148,8 @@ if (isset($_POST['submit'])) {
                                     <input type="text" class="form-control" id="minut3" name="minut3" required>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center mb-3">
-                                <button name="submit" id="submit" type="submit" class="btn btn-primary">Enviar</button>
+                            <div class="text-center">
+                                <button type="submit" name="submit" class="btn btn-primary">Salvar</button>
                             </div>
                         </form>
                     </div>

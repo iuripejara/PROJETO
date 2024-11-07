@@ -1,149 +1,177 @@
+/* Resetando estilos padrões */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Oxygen", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', "Open Sans", sans-serif;
 }
 
+/* Definindo as cores */
 :root {
-    --color--background: #000819;
-    --color--letrasBrancas: white;
-    --color--caixaPesqu: #071229;
-    --color--btnSuccess: #28a745;
-    --color--btnPrimary: #007bff;
+  --color--background: #000819; /* Azul escuro */
+  --color--letrasBrancas: white; /* Branco para o texto */
+  --color--caixaPesqu: #071229; /* Azul mais suave para caixas de pesquisa */
+  --color--btnSuccess: #28a745; /* Verde para botões de sucesso */
+  --color--btnPrimary: #007bff; /* Azul para botões principais */
 }
 
+/* Corpo e fundo */
 body {
-    height: 100vh;
-    background-color: var(--color--background) !important;
-    color: var(--color--letrasBrancas) !important;
+  height: 100vh;
+  background-color: var(--color--background) !important;
+  color: var(--color--letrasBrancas) !important;
 }
 
+/* Container principal */
 .container {
-    max-width: 600px;
-    margin: auto;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
 }
 
+/* Estilo para os cartões */
 .card {
-    background-color: var(--color--caixaPesqu) !important;
-    color: var(--color--letrasBrancas) !important;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+  background-color: var(--color--caixaPesqu) !important;
+  color: var(--color--letrasBrancas) !important;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card-body {
-    padding: 2rem;
-    text-align: center;
+  padding: 2rem;
+  text-align: center;
 }
 
+/* Título do card */
 .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
+/* Texto do card */
 .card-text {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
+/* Imagem do perfil */
 .perfil-img {
-    border-radius: 100px !important; /* Tornando a imagem perfeitamente redonda */
-    border: 3px solid var(--color--btnPrimary) !important;
-    width: 200px; /* Aumentando o tamanho da imagem */
-    height: 200px; /* Aumentando o tamanho da imagem */
-    transition: box-shadow 0.3s ease;
+  border-radius: 100px !important; /* Tornando a imagem redonda */
+  border: 3px solid var(--color--btnPrimary) !important;
+  width: 200px; /* Aumentando o tamanho da imagem */
+  height: 200px; /* Aumentando o tamanho da imagem */
+  transition: box-shadow 0.3s ease;
 }
 
 .perfil-img:hover {
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* Efeito de brilho azul */
+  transform: scale(1.1); /* Aumenta a imagem */
 }
 
+/* Botões principais */
 .btn {
-    margin: 0.2rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Botão de sucesso */
 .btn-success {
-    background-color: var(--color--btnSuccess) !important;
-    border-color: var(--color--btnSuccess) !important;
+  background-color: var(--color--btnSuccess) !important;
+  border-color: var(--color--btnSuccess) !important;
 }
 
 .btn-success:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+  background-color: #218838;
+  border-color: #1e7e34;
 }
 
+/* Botão principal */
 .btn-primary {
-    background-color: var(--color--btnPrimary) !important;
-    border-color: var(--color--btnPrimary) !important;
+  background-color: var(--color--btnPrimary) !important;
+  border-color: var(--color--btnPrimary) !important;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+  background-color: #0056b3;
+  border-color: #004085;
 }
 
+/* Linha de separação */
 hr.bg-light {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Estilo para o perfil e animação da data */
+/* Estilo para a data de ingresso */
 .data-ingresso {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: #fff; /* Cor padrão do texto */
-  
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-    margin: 10px auto;
-    display: inline-block;
-  }
-  
-  .data-ingresso span {
-    display: inline-block;
-    animation: douradoAnimado 1.5s infinite;
-  }
-  
-  .data-ingresso span:nth-child(odd) {
-    animation-delay: 0.25s;
-  }
-  
-  .data-ingresso span:nth-child(even) {
-    animation-delay: 0.5s;
-  }
-  
-  @keyframes douradoAnimado {
-    0% {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #fff; /* Cor padrão do texto */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin: 10px auto;
+  display: inline-block;
+}
+
+.data-ingresso span {
+  display: inline-block;
+  animation: douradoAnimado 1.5s infinite;
+}
+
+.data-ingresso span:nth-child(odd) {
+  animation-delay: 0.25s;
+}
+
+.data-ingresso span:nth-child(even) {
+  animation-delay: 0.5s;
+}
+
+/* Animação dourada para a data */
+@keyframes douradoAnimado {
+  0% {
       color: #fff;
-    }
-    50% {
-      color: #b38b3d; /* Dourado */
-    }
-    100% {
+  }
+  50% {
+      color: #b38b3d; /* Cor dourada */
+  }
+  100% {
       color: #fff;
-    }
   }
-  
-  .perfil-img {
-    border-radius: 50%;
-    border: 2px solid #fff;
-    transition: transform 0.3s ease;
-  }
-  
-  .perfil-img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
-  }
-  
+}
+
+/* Responsividade para o layout */
+@media (max-width: 767px) {
   .container {
-    padding: 20px;
+      padding: 15px;
   }
+
+  .perfil-img {
+      width: 150px;
+      height: 150px;
+  }
+
+  .card-title {
+      font-size: 1.25rem;
+  }
+
+  .card-text {
+      font-size: 0.9rem;
+  }
+
+  .btn {
+      font-size: 0.85rem;
+  }
+
+  .data-ingresso {
+      font-size: 16px;
+  }
+}
