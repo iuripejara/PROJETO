@@ -1,13 +1,21 @@
+-- Criação da tabela utilizadores
 CREATE TABLE utilizadores (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) UNIQUE KEY NOT NULL,
-    senha VARCHAR(50) NOT NULL
+    senha VARCHAR(50) NOT NULL,
+    data_ingresso DATE DEFAULT CURRENT_DATE,
+    foto_perfil VARCHAR(255) DEFAULT '../imags/logo/user.svg'
 );
 
+-- Inserção de dados na tabela utilizadores
 INSERT INTO utilizadores (nome, senha) VALUES ('adm', '4554');
 INSERT INTO utilizadores (nome, senha) VALUES ('teste', '9090');
 INSERT INTO utilizadores (nome, senha) VALUES ('iuri', '12345');
 
+-- Atualização da data de ingresso para registros já existentes, se necessário
+UPDATE utilizadores SET data_ingresso = '2024-11-07' WHERE data_ingresso IS NULL;
+
+-- Criação da tabela videos_concluidos com chaves estrangeiras
 CREATE TABLE videos_concluidos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
@@ -17,8 +25,7 @@ CREATE TABLE videos_concluidos (
     CONSTRAINT unique_user_video UNIQUE (user_id, video_id)
 );
 
-
-<!-- tabelas videos  -->
+-- Criação da tabela videos
 CREATE TABLE videos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     video VARCHAR(100) NOT NULL,
@@ -43,4 +50,3 @@ VALUES
 ('../videos/nextjs.mkv', '../imags/logo/nextjs.png', 'Next js', 'Next js', '../imags/nextjs_1.png', '../imags/nextjs_2.png', '../imags/nextjs_3.png', '5mins', '38mins', '10mins', 'Next js Imagem de exemplo : 1', 'Next js Imagem de exemplo : 2', 'Next js Imagem de exemplo : 3'),
 ('../videos/react.mkv', '../imags/logo/react.png', 'React js', 'React js', '../imags/react_1.png', '../imags/react_2.png', '../imags/react_3.png', '20mins', '30mins', '40mins', 'react js Imagem de exemplo : 1', 'react js Imagem de exemplo : 2', 'react js Imagem de exemplo : 3'),
 ('../videos/nodejs.mkv', '../imags/logo/nodejs.png', 'Node js', 'Node js', '../imags/nodejs_1.png', '../imags/nodejs_2.png', '../imags/nodejs_3.png', '25mins', '44mins', '56mins', 'node js Imagem de exemplo : 1', 'node js Imagem de exemplo : 2', 'node js Imagem de exemplo : 3');
-ALTER TABLE utilizadores ADD COLUMN foto_perfil VARCHAR(255) DEFAULT 'imagens/default.png';

@@ -38,7 +38,7 @@ if (isset($_SESSION["id"])) {
     <div class="container mt-3">
         <div class="row align-items-center">
             <div class="col text-center">
-                <h2>Perfil do Utilizador</h2>
+                <h2>Perfil do Utilizador <?php echo htmlspecialchars($user['nome']); ?></h2>
             </div>
             <div class="col-auto">
                 <a href="../projetos/index.php">
@@ -52,19 +52,24 @@ if (isset($_SESSION["id"])) {
     </div>
     
     <div class="container mt-5">
-        
         <div class="card">
             <div class="card-body">
-                <?php
-                    echo "<h4 class='card-title'>Bem-vindo, " . htmlspecialchars($user['nome']) . "</h4>";
-                    echo "<p class='card-text'>Total de videos concluidos : " . htmlspecialchars($user['id']) . "</p>"; // Exemplo de como mostrar o ID
-                    
-                    // Exibindo a foto de perfil
-                    echo "<div>";
-                    echo "<img src='" . htmlspecialchars($user['foto_perfil']) . "' class='perfil-img img-thumbnail' width='150'>";
-                    echo "</div>";
-                ?> 
-                <div class="mb-3 mt-3 d-flex flex-column ">
+            <?php
+                // Exibindo a data com animação de cor dourada
+                $data_ingresso = date("d/m/Y", strtotime($user['data_ingresso']));
+
+                // Exibindo a data com animação, cada caractere em um <span>
+                echo "<p class='data-ingresso'>Membro desde: " . implode('', array_map(function($char) {
+                    return "<span class='data-character'>$char</span>";  // Você pode adicionar uma classe específica para o efeito
+                }, str_split($data_ingresso))) . "</p>";
+
+                // Exibindo a foto de perfil com estilo
+                echo "<div>";
+                echo "<img src='" . htmlspecialchars($user['foto_perfil']) . "' class='perfil-img img-thumbnail' width='150'>";
+                echo "</div>";
+            ?>
+                
+                <div class="mb-3 mt-3 d-flex flex-column">
                     <label for="foto_perfil">Atualizar Foto de Perfil:</label>
                     <form action="upload_foto.php" method="POST" enctype="multipart/form-data">
                         <!-- Input de arquivo escondido -->
@@ -77,7 +82,6 @@ if (isset($_SESSION["id"])) {
                         <button type="submit" class="btn btn-primary mt-2">Salvar Foto</button>
                     </form>
                 </div>
-                    
             </div>
         </div>
     </div>

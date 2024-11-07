@@ -93,3 +93,57 @@ body {
 hr.bg-light {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* Estilo para o perfil e animação da data */
+.data-ingresso {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #fff; /* Cor padrão do texto */
+  
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 10px auto;
+    display: inline-block;
+  }
+  
+  .data-ingresso span {
+    display: inline-block;
+    animation: douradoAnimado 1.5s infinite;
+  }
+  
+  .data-ingresso span:nth-child(odd) {
+    animation-delay: 0.25s;
+  }
+  
+  .data-ingresso span:nth-child(even) {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes douradoAnimado {
+    0% {
+      color: #fff;
+    }
+    50% {
+      color: #b38b3d; /* Dourado */
+    }
+    100% {
+      color: #fff;
+    }
+  }
+  
+  .perfil-img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .perfil-img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+  }
+  
+  .container {
+    padding: 20px;
+  }
