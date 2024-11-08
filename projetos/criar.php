@@ -123,29 +123,29 @@ if (isset($_POST['submit'])) {
                             <div class="row mb-3">
                                 <div class="col-md-4">
                                     <label for="descr" class="form-label">Descrição:</label>
-                                    <input type="text" class="form-control" id="descr" name="descr" required>
+                                    <input type="text" class="form-control" id="descr" name="descr" value ="exemplo: 1"  required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="descr2" class="form-label">Descrição 2:</label>
-                                    <input type="text" class="form-control" id="descr2" name="descr2" required>
+                                    <input type="text" class="form-control" id="descr2" name="descr2" value ="exemplo: 2"  required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="descr3" class="form-label">Descrição 3:</label>
-                                    <input type="text" class="form-control" id="descr3" name="descr3" required>
+                                    <input type="text" class="form-control" id="descr3" name="descr3" value ="exemplo: 3" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-4">
                                     <label for="minut" class="form-label">Minutos do vídeo 1:</label>
-                                    <input type="text" class="form-control" id="minut" name="minut" required>
+                                    <input type="text" class="form-control" id="minut" name="minut" value ="mins" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="minut2" class="form-label">Minutos do vídeo 2:</label>
-                                    <input type="text" class="form-control" id="minut2" name="minut2" required>
+                                    <input type="text" class="form-control" id="minut2" name="minut2" value ="mins" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="minut3" class="form-label">Minutos do vídeo 3:</label>
-                                    <input type="text" class="form-control" id="minut3" name="minut3" required>
+                                    <input type="text" class="form-control" id="minut3" name="minut3" value ="mins"required>
                                 </div>
                             </div>
                             <div class="text-center">
