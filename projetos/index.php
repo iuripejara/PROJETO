@@ -46,8 +46,8 @@ $resultado = $ligacao->query($sql);
                     <ul>
                         <li class="item-menu"><a href=""><span class="icon"><i class="bi bi-house"></i></span><span class="txt-link">Dashboard</span></a></li>
                         <li class="item-menu"><a href="../projetos/Perfil.php"><span class="icon"><i class="bi bi-wallet2"></i></span><span class="txt-link">Perfil</span></a></li>
-                        <?php if ($_SESSION['id'] == "adm") { ?>
-                        <li class="item-menu"><a href="../projetos/Gerenciamento.php"><span class="icon"><i class="bi bi-gear"></i></span><span class="txt-link">Gerenciamento</span></a></li>
+                        <?php if ($_SESSION['tipo'] == "admin") { ?>
+                            <li class="item-menu"><a href="../projetos/Gerenciamento.php"><span class="icon"><i class="bi bi-gear"></i></span><span class="txt-link">Gerenciamento</span></a></li>
                         <?php } ?>
                         <li class="item-menu"><a href="../projetos/login.php"><span class="icon"><i class="bi bi-power"></i></span><span class="txt-link-Lougout">Logout</span></a></li>
                     </ul>

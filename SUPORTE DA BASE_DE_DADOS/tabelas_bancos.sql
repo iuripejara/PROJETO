@@ -14,6 +14,9 @@ INSERT INTO utilizadores (nome, senha) VALUES ('iuri', '12345');
 
 -- Atualização da data de ingresso para registros já existentes, se necessário
 UPDATE utilizadores SET data_ingresso = '2024-11-07' WHERE data_ingresso IS NULL;
+ALTER TABLE utilizadores ADD COLUMN tipo ENUM('admin', 'comum') DEFAULT 'comum';
+UPDATE utilizadores SET tipo = 'admin' WHERE nome = 'adm';
+
 
 -- Criação da tabela videos_concluidos com chaves estrangeiras
 CREATE TABLE videos_concluidos (

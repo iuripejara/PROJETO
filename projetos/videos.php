@@ -1,5 +1,4 @@
 <?php
-
 include('protect.php');
 $sql ="SELECT * from videos where id=$_GET[id] ";
 $resultado = $ligacao ->query($sql);
@@ -59,7 +58,23 @@ $registro = $resultado->fetch_assoc();
                     </a>
                     <div class="collapse" id="collapseVideo1">
                         <div class="card card-body">
-                            <img src="<?php echo $registro['imag1'] ?>" alt="Image 1" class="img-fluid my-2">
+                            <!-- Imagem com funcionalidade para abrir o modal -->
+                            <img src="<?php echo $registro['imag1'] ?>" alt="Image 1" class="img-fluid my-2" data-bs-toggle="modal" data-bs-target="#imageModal1">
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel1">Imagem Maior</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="<?php echo $registro['imag1'] ?>" alt="Image 1" class="img-fluid">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -70,7 +85,23 @@ $registro = $resultado->fetch_assoc();
                     </a>
                     <div class="collapse" id="collapseVideo2">
                         <div class="card card-body">
-                            <img src="<?php echo $registro['imag2'] ?>" alt="Image 2" class="img-fluid my-2">
+                            <!-- Imagem com funcionalidade para abrir o modal -->
+                            <img src="<?php echo $registro['imag2'] ?>" alt="Image 2" class="img-fluid my-2" data-bs-toggle="modal" data-bs-target="#imageModal2">
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel2">Imagem Maior</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="<?php echo $registro['imag2'] ?>" alt="Image 2" class="img-fluid">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -81,7 +112,23 @@ $registro = $resultado->fetch_assoc();
                     </a>
                     <div class="collapse" id="collapseVideo3">
                         <div class="card card-body">
-                            <img src="<?php echo $registro['imag3'] ?>" alt="Image 3" class="img-fluid my-2">
+                            <!-- Imagem com funcionalidade para abrir o modal -->
+                            <img src="<?php echo $registro['imag3'] ?>" alt="Image 3" class="img-fluid my-2" data-bs-toggle="modal" data-bs-target="#imageModal3">
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel3" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel3">Imagem Maior</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="<?php echo $registro['imag3'] ?>" alt="Image 3" class="img-fluid">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,7 +137,7 @@ $registro = $resultado->fetch_assoc();
     </div>
 </main>
 
-    <script src="../scripts/concluido.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../scripts/concluido.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

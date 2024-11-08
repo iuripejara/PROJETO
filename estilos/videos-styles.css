@@ -32,7 +32,7 @@ body {
     border: 2px solid var(--color-highlight);
     overflow: hidden;
     width: 100%;
-    margin-left: 25px;
+    margin-left: 10px;
 }
 
 .sidebar {
@@ -90,5 +90,32 @@ body {
     .sidebar {
         width: 30%;
         margin-left: 20px;
+    }
+}
+/* Para garantir que a imagem no modal seja responsiva */
+.modal-body img {
+    width: 100%;  /* Assegura que a imagem ocupe toda a largura disponível no modal */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Aumentar o tamanho da imagem no modal para desktops grandes */
+@media (min-width: 768px) {
+    .modal-dialog {
+        max-width: 90%; /* Permite que o modal tenha uma largura maior em telas grandes */
+    }
+
+    .modal-body img {
+        max-width: 100%;  /* A imagem pode ocupar até 100% da largura do modal */
+    }
+}
+
+/* Para telas maiores que 1200px (telas extra grandes) */
+@media (min-width: 1200px) {
+    .modal-dialog {
+        max-width: 70%;  /* O modal ocupará menos largura na tela */
+    }
+
+    .modal-body img {
+        max-width: 100%;  /* A imagem ocupa 100% do modal */
     }
 }

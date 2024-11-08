@@ -20,13 +20,12 @@ if(isset($_POST["login"])) {
         
         // Verificar a senha (deve ser comparada de maneira segura, como com password_verify se estiver usando hash)
         if ($password == $row['senha']) {
-            // Login bem-sucedido, define a sessão para o usuário
             $_SESSION["id"] = $username;
-
-            // Redireciona para a página protegida (index.php ou outra página segura)
+            $_SESSION["tipo"] = $row['tipo']; // Adiciona o tipo de utilizador à sessão
+        
             header("Location: index.php");
             exit();
-        } else {
+        }else {
             // Senha incorreta
             $erro = "Senha incorreta";
         }
